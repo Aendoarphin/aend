@@ -35,10 +35,10 @@ const Projects = () => {
               <div className="text-center p-16">
                 <Carousel className="">
                   <CarouselContent className="items-center">
-                    <CarouselItem><img src="/src/assets/images/figma/p1.png" alt="" /></CarouselItem>
-                    <CarouselItem><img src="/src/assets/images/figma/p2.png" alt="" /></CarouselItem>
-                    <CarouselItem><img src="/src/assets/images/figma/p3.png" alt="" /></CarouselItem>
-                    <CarouselItem><img src="/src/assets/images/figma/p4.png" alt="" /></CarouselItem>
+                    <CarouselItem><img src="./src/assets/images/figma/p1.png" alt="" /></CarouselItem>
+                    <CarouselItem><img src="./src/assets/images/figma/p2.png" alt="" /></CarouselItem>
+                    <CarouselItem><img src="./src/assets/images/figma/p3.png" alt="" /></CarouselItem>
+                    <CarouselItem><img src="./src/assets/images/figma/p4.png" alt="" /></CarouselItem>
                   </CarouselContent>
                   <CarouselPrevious />
                   <CarouselNext />
