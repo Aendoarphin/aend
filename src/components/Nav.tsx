@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { ModeToggle } from './ui/mode-toggle.tsx';
-import { Button } from './ui/button.tsx';
+import { ModeToggle } from './ui/mode-toggle.jsx';
+import { Button } from './ui/button.jsx';
 
 const Nav = () => {
   const [prevScrollPos, setPrevScrollPos] = useState<number>(0);

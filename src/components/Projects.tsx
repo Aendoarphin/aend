@@ -4,7 +4,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel.tsx"
+} from "@/components/ui/carousel.jsx"
 
 const Projects = () => {
   return (
