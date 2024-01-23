@@ -4,7 +4,7 @@ const About = () => {
       <div id="about-me" className="flex flex-col px-6 md:px-28 md:flex-row md:items-center md:gap-10 md:p-10 lg:p-40 xl:px-60">
         <img
           className="rounded-full mx-auto size-52 mb-6 md:size-80"
-          src="./src/assets/images/profile_image.jpg"
+          src="/assets/images/profile_image.jpg"
           height={100}
           width={100}
           alt="profile image"

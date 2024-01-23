@@ -21,7 +21,7 @@ const Projects = () => {
           <br />
           <a rel="noopener" href="https://github.com/Aendoarphin/pyforcam" target="_blank" className="font-bold">Tool Life Utility</a>
           <p>Another desktop app which is essentially an XML reader. It fetches information from a local server and displays the processed information on the UI.</p>
-          <img src="src/assets/images/tlu_sample.png" alt="project image sample" />
+          <img src="/assets/images/tlu_sample.png" alt="project image sample" />
           <br />
           <h1 className="font-bold text-4xl text-center py-6">
             Backlog
@@ -35,10 +35,10 @@ const Projects = () => {
               <div className="text-center p-16">
                 <Carousel className="">
                   <CarouselContent className="items-center">
-                    <CarouselItem><img src="./src/assets/images/figma/p1.png" alt="" /></CarouselItem>
-                    <CarouselItem><img src="./src/assets/images/figma/p2.png" alt="" /></CarouselItem>
-                    <CarouselItem><img src="./src/assets/images/figma/p3.png" alt="" /></CarouselItem>
-                    <CarouselItem><img src="./src/assets/images/figma/p4.png" alt="" /></CarouselItem>
+                    <CarouselItem><img src="/assets/images/figma/p1.png" alt="" /></CarouselItem>
+                    <CarouselItem><img src="/assets/images/figma/p2.png" alt="" /></CarouselItem>
+                    <CarouselItem><img src="/assets/images/figma/p3.png" alt="" /></CarouselItem>
+                    <CarouselItem><img src="/assets/images/figma/p4.png" alt="" /></CarouselItem>
                   </CarouselContent>
                   <CarouselPrevious />
                   <CarouselNext />
