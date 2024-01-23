@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <>
-      <div id="about-me" className="h-min flex flex-col px-6 md:px-28 md:flex-row md:items-center md:gap-10 md:p-10 lg:p-40 xl:px-60 xl:h-screen xl:-mt-20">
+      <div id="about-me" className="-mt-10 h-min flex flex-col px-6 md:px-28 md:flex-row md:items-center md:gap-10 md:p-10 lg:p-40 xl:px-60 xl:h-screen xl:-mt-20">
         <img
           className="rounded-full mx-auto size-52 mb-6 md:size-80"
           src="/assets/images/profile_image.jpg"

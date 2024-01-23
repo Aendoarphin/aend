@@ -1,7 +1,7 @@
 const Stack = () => {
   return (
     <>
-      <div id="my-stack" className="px-6 text-center h-min flex flex-col gap-6 md:px-28 lg:px-40 xl:px-60">
+      <div id="my-stack" className="px-6 text-center h-min flex flex-col gap-6 md:px-28 lg:px-40 lg:h-screen xl:px-60">
           <h1 className="font-bold text-4xl text-center py-6">
             My Stack
           </h1>

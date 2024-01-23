@@ -9,7 +9,7 @@ import {
 const Projects = () => {
   return (
     <>
-      <div id="projects" className="px-6 text-center flex flex-col gap-6 md:px-28 lg:px-40 xl:px-60">
+      <div id="projects" className="h-min px-6 text-center flex flex-col gap-6 md:px-28 lg:px-40 xl:px-60">
         <h1 className="font-bold text-4xl text-center py-6">
             Projects
         </h1>

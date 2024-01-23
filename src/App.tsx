@@ -8,7 +8,7 @@ import Connect from './components/Connect.tsx'
 const App = () => {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <div className='flex flex-col gap-[4vw] md:gap-[12vw] lg:gap-0'>
+      <div className='flex flex-col gap-[20vw] md:gap-[12vw] lg:gap-0'>
         <Nav/>
         <About/>
         <Stack/>
