@@ -5,11 +5,11 @@ My personal website which uses sleek and epic front-end tools. I will be adding 
 A Vite + React + Typescript web app to showcase my skills. Discover the technologies I work with, read about my priorities, and stay up to date with my ongoing projects.
 
 ## Deployment
-<div style="text-align: center; padding: 3rem">
+<p align="center" style="padding: 3rem">
   <a href="https://vercel.com/">
     <img src="./public/vercel-logotype-light.svg" alt="Vercel Logo" height="64">
   </a>
-</div>
+</p>
 
 
 ## Styling
