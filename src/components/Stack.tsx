@@ -7,7 +7,7 @@ const Stack = () => {
           </h1>
           <hr className=""/>
           <p className="text-center">These are some tools I often work with</p>
-          <div className="items-center h-full my-auto text-6xl flex flex-wrap justify-around gap-20 mx-auto p-6 md:text-8xl md:w-full">
+          <div className="items-center h-full my-auto text-6xl flex flex-wrap justify-around gap-20 mx-auto p-6 md:text-8xl md:w-full xl:text-9xl xl:p-20">
             <i className=" fa-brands fa-html5 hover:text-orange-400 transition-colors ease-in" aria-hidden="true"></i>
             <i className=" fa-brands fa-css3 hover:text-blue-400 transition-colors ease-in" aria-hidden="true"></i>
             <i className=" fa-brands fa-js hover:text-yellow-400 transition-colors ease-in" aria-hidden="true"></i>

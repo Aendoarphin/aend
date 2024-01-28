@@ -15,11 +15,11 @@ const Projects = () => {
         </h1>
         <hr className="" />
         <div className="text-left flex flex-col gap-4">
-          <a rel="noopener" href="https://github.com/Aendoarphin/comps_v1" target="_blank" className="font-bold">Comps</a>
+          <a rel="noopener noreferrer" href="https://github.com/Aendoarphin/comps_v1" target="_blank" className="font-bold">Comps</a>
           <p>A desktop app for trading card collectors. Provides sales information and price trends for single trading cards listed on eBay.</p>
           <iframe height={300} src="https://www.youtube.com/embed/G1poX9Qd7oY?si=cGGPk-fWSM2fVDiV" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
           <br />
-          <a rel="noopener" href="https://github.com/Aendoarphin/pyforcam" target="_blank" className="font-bold">Tool Life Utility</a>
+          <a rel="noopener noreferrer" href="https://github.com/Aendoarphin/pyforcam" target="_blank" className="font-bold">Tool Life Utility</a>
           <p>Another desktop app which is essentially an XML reader. It fetches information from a local server and displays the processed information on the UI.</p>
           <img src="/assets/images/tlu_sample.png" alt="project image sample" />
           <br />
@@ -47,7 +47,7 @@ const Projects = () => {
             </div>
             <div>
               <h1 className="font-bold">Untitled</h1>
-              An "e-learning platform" with a documentation-like structure, providing online training and incorporating company-defined guidelines.
+              An e-learning platform with a documentation-like structure, providing online training and incorporating company-defined guidelines.
             </div>
           </div>
         </div>
