@@ -23,10 +23,10 @@ const About = () => {
           </div>
           <hr className=""/>
           <p className="text-sm">
-          I&apos;m an Oklahoma-based web developer with diverse experience in various technologies. Currently exploring modern frameworks, I'm on a journey towards becoming a full-stack developer.
+          I&apos;m an Oklahoma-based web developer with diverse experience in various technologies. Currently exploring modern frameworks, I&apos;m on a journey towards becoming a full-stack developer.
           </p>
           <p className="text-sm">
-          My mission is to enhance user experience through intuitive and accessible software. I'm committed to ensuring seamless access, navigation, and utilization of the software I create. By simplifying complex interfaces, my goal is to make technology more user-friendly and efficient for everyone.
+          My mission is to enhance user experience through intuitive and accessible software. I&apos;m committed to ensuring seamless access, navigation, and utilization of the software I create. By simplifying complex interfaces, my goal is to make technology more user-friendly and efficient for everyone.
           </p>
         </div>
       </div>
