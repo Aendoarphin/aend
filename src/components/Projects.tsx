@@ -33,7 +33,7 @@ const Projects = () => {
               <h1 className="font-bold">Scraphouse</h1>
               A unified platform to provide aggregated MMA content
               <div className="">
-              <Carousel className="border border-red-500 mt-2 h-max">
+              <Carousel className=" mt-2 h-max">
                   <CarouselContent className="items-center">
                     <CarouselItem><img src="/assets/images/figma/p1.png" alt="image1" className="mx-auto" /></CarouselItem>
                     <CarouselItem><img src="/assets/images/figma/p2.png" alt="image2" className="mx-auto" /></CarouselItem>
