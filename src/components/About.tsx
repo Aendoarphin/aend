@@ -14,7 +14,7 @@ const About = () => {
             Arhon Pineda
           </h1>
           <div className="flex justify-center gap-4 text-sm">
-            <a rel="noopener noreferrer" target="_blank" title="LinkedIn" href="https://www.linkedin.com/in/arhon-p-ba957023a/">
+            <a rel="noopener noreferrer" target="_blank" title="LinkedIn" href="https://www.linkedin.com/in/arhon-pineda-ba957023a/">
               <i className="fa-brands fa-linkedin" aria-hidden="true"></i>
             </a>
             <a rel="noopener noreferrer" target="_blank" title="GitHub" href="https://github.com/aendoarphin">
