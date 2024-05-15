@@ -1,36 +1,30 @@
-# TLDR
-My personal website which uses sleek and epic front-end tools. I will be adding more content to this site.
+# React + TypeScript + Vite
 
-## Summary
-A Vite + React + Typescript web app to showcase my skills. Discover the technologies I work with, read about my priorities, and stay up to date with my ongoing projects.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Deployment
-<p align="center" style="padding: 3rem">
-  <a href="https://vercel.com/">
-    <img src="./public/vercel-logotype-light.svg" alt="Vercel Logo" height="64">
-  </a>
-</p>
+Currently, two official plugins are available:
 
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Styling
-- [Shadcn UI](https://ui.shadcn.com/) - Faster component creation
-- [Tailwind CSS](https://tailwindcss.com/) - Shadcn requires it. I also prefer utility styling
-- [SASS](https://sass-lang.com/documentation/syntax/) - Extensibility for future versions
+## Expanding the ESLint configuration
 
-## Feature Backlog
-1. Blog post section to share ideas/work
-2. Contact form for user feedback/inquiry
-3. Merch store for my apparel designs
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-## PAQs (Potentially Asked Questions)
-### Q: Why are you integrating TS and TSX for a simple static app?
-A: I will be adding more features. It's a simple portfolio-esque site for now. Working with Typescript would also yield a good learning experience for me.
+- Configure the top-level `parserOptions` property like this:
 
-### Q: Why is [some feature] not working?.
-A: Reach out ASAP and I will fix it.
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+  },
+}
+```
 
-### Q: Could you make [some project] for me?
-A: Please send me detailed requirements and I can provide an overview of possible solutions/ideas.
-
-### Q: How can I contribute?
-A: You can do so in many ways. Just reach out and we can have a discussion. I am totally open to collaborating.
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list

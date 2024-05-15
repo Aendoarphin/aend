@@ -1,22 +1,25 @@
-import { ThemeProvider } from './components/ui/theme-provider.tsx'
-import Nav from './components/Nav.tsx'
-import About from './components/About.tsx'
-import Stack from './components/Stack.tsx'
-import Projects from './components/Projects.tsx'
-import Connect from './components/Connect.tsx'
+import "./App.css";
+import { Nav } from "./components/Nav";
+import { About } from "./components/About";
+import Projects from "./components/Projects";
 
-const App = () => {
-  return (
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <div className='flex flex-col gap-[20vw] md:gap-[12vw] lg:gap-0'>
-        <Nav/>
-        <About/>
-        <Stack/>
-        <Projects/>
-        <Connect/>
-      </div>
-    </ThemeProvider>
-  )
+function App() {
+	
+
+	return (
+		<div className="bg-background text-color-default">
+			<header>
+				<Nav />
+			</header>
+			<main>
+				<About />
+				<Projects />
+			</main>
+			<footer>
+				<p className="text-sm font-light text-center p-4">&copy; {new Date().getFullYear()} AEND</p>
+			</footer>
+		</div>
+	);
 }
 
-export default App
+export default App;

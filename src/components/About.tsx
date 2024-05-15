@@ -1,37 +1,59 @@
+import { SiLinkedin, SiGithub } from "@icons-pack/react-simple-icons";
+import { Phone, Mail, MapPin } from "lucide-react";
 const About = () => {
-  return (
-    <>
-      <div id="about-me" className="-mt-10 h-min flex flex-col px-6 md:px-28 md:flex-row md:items-center md:gap-10 md:p-10 lg:p-40 xl:px-60 xl:h-screen xl:-mt-20">
-        <img
-          className="rounded-full mx-auto size-52 mb-6 md:size-80"
-          src="/assets/images/profile_image.jpg"
-          height={100}
-          width={100}
-          alt="profile image"
-        />
-        <div className="flex flex-col gap-4">
-          <h1 className="font-bold text-4xl text-center">
-            Arhon Pineda
-          </h1>
-          <div className="flex justify-center gap-4 text-sm">
-            <a rel="noopener noreferrer" target="_blank" title="LinkedIn" href="https://www.linkedin.com/in/arhon-pineda-ba957023a/">
-              <i className="fa-brands fa-linkedin" aria-hidden="true"></i>
-            </a>
-            <a rel="noopener noreferrer" target="_blank" title="GitHub" href="https://github.com/aendoarphin">
-              <i className="fa-brands fa-github" aria-hidden="true"></i>
-            </a>
-          </div>
-          <hr className=""/>
-          <p className="text-sm">
-          I&apos;m an Oklahoma-based web developer with diverse experience in various technologies. Currently exploring modern frameworks, I&apos;m on a journey towards becoming a full-stack developer.
-          </p>
-          <p className="text-sm">
-          My mission is to enhance user experience through intuitive and accessible software. I&apos;m committed to ensuring seamless access, navigation, and utilization of the software I create. By simplifying complex interfaces, my goal is to make technology more user-friendly and efficient for everyone.
-          </p>
-        </div>
-      </div>
-    </>
-  );
-}
+	return (
+		<div
+			id="about"
+			className="flex flex-col md:flex-row-reverse md:items-center md:justify-center md:min-h-screen"
+		>
+			<div className="mt-24 md:mt-0 max-w-full flex md:flex-col overflow-clip justify-center min-w-64">
+				<img
+					src="./src/assets/profile-img.png"
+					alt=""
+					className="size-64 lg:size-80 rounded-full overflow-clip bg-[url(./src/assets/profile-bg.jpg)] mix-blend-screen"
+				/>
+				<div
+					id="contact-container"
+					className="flex flex-col md:flex-row md:mx-auto gap-6 p-4 my-auto"
+				>
+					<a
+						href="https://www.linkedin.com/in/arhon-pineda-ba957023a/"
+						title="LinkedIn"
+					>
+						<SiLinkedin />
+					</a>
+					<a href="https://github.com/aendoarphin" title="GitHub">
+						<SiGithub />
+					</a>
+					<a href="tel:+19189062551" title="Phone">
+						<Phone fill="var(--foreground)" strokeWidth={0} />
+					</a>
+					<a href="mailto:arhon.k.pineda@gmail.com" title="Email">
+						<Mail stroke="var(--background)" fill="white" />
+					</a>
+				</div>
+			</div>
+			<div className="p-8 md:pl-0 mx-auto md:mx-0 max-w-[30em]">
+				<div className="text-nowrap flex justify-between items-center">
+					<h1 className="text-heading font-semibold">Arhon Pineda</h1>
+					<p className="font-light text-xs flex flex-row gap-1">
+						<MapPin
+							size={18}
+							fill="var(--foreground)"
+							stroke="var(--background)"
+						/>
+						Oklahoma, USA
+					</p>
+				</div>
+				<hr className="mb-2" />
+				<p className="font-light">
+					Arhon is a web developer and graphic designer deeply passionate about
+					user experience and visual aesthetics. His primary goal is to create
+					user-centered products and solutions.
+				</p>
+			</div>
+		</div>
+	);
+};
 
-export default About;
+export { About };

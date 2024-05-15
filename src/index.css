@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "zbonus";
+  src: url(/zbonus.ttf);
+}
+
+:root {
+  --background: #151515;
+  --foreground: #e3e3e3;
+  --success: #52b55a;
+  --danger: #cb4f4f;
+  --info: #3ea6cf;
+  --warning: #d2b34d;
+  --shadow: #0000007d;
+  --heading: 30px;
+  --subheading: 20px;
+}
+
+* {
+  font-family: "Poppins";
+  /* border: 1px solid whitesmoke; */
+}
