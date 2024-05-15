@@ -1,4 +1,3 @@
-import { ArrowDownFromLine } from "lucide-react";
 import { useState } from "react";
 
 export default function Projects() {
