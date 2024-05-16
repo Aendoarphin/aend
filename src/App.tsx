@@ -4,7 +4,7 @@ import { About } from "./components/About";
 import Projects from "./components/Projects";
 
 function App() {
-	
+
 
 	return (
 		<div className="bg-background text-color-default">
