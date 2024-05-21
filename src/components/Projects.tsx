@@ -1,8 +1,22 @@
 import { useState } from "react";
-import { SiPython, SiQt, SiJavascript, SiNextdotjs, SiReact, SiMongodb, SiCss3, SiSass, SiAuth0 } from "@icons-pack/react-simple-icons";
+import {
+	SiPython,
+	SiQt,
+	SiJavascript,
+	SiNextdotjs,
+	SiReact,
+	SiMongodb,
+	SiCss3,
+	SiSass,
+	SiAuth0,
+} from "@icons-pack/react-simple-icons";
 
 export default function Projects() {
-
+	const shImages = [
+		"src/assets/sh_home.jpeg",
+		"src/assets/sh_dashboard.jpeg",
+		"src/assets/sh_rankings.jpeg",
+	];
 	type Project = {
 		title: string;
 		stack: JSX.Element[];
@@ -10,38 +24,64 @@ export default function Projects() {
 		from: string;
 		to: string;
 		link: string;
-		media: string | string[];
-	}
+		media: JSX.Element;
+	};
 
 	const projects: Project[] = [
 		{
 			title: "Comps",
-			stack: [<SiPython className="text-yellow-300" />, <SiQt className="text-green-400" />],
-			description: "This desktop application retrieves and processes sold listings data from eBay, streamlining the process for collectors to access and isolate sold trading card listings. It enables collectors to identify fair prices for buying or selling trading cards in the eBay trading card market, providing valuable insights for making informed pricing decisions.",
+			stack: [<SiPython color="#3776AB" />, <SiQt color="#41CD52" />],
+			description:
+				"A desktop application which retrieves and processes sold listings data from eBay, streamlining the process for collectors to access and isolate sold trading card listings. It enables collectors to identify fair prices for buying, bidding, or selling trading cards in the eBay trading card market, providing valuable insights for making informed pricing decisions.",
 			from: "January 2023",
 			to: "April 2023",
 			link: "https://github.com/Aendoarphin/comps_v1",
-			media: "../assets/tlu_sample.png"
+			media: (
+				<iframe
+					height={300}
+					src="https://www.youtube.com/embed/G1poX9Qd7oY?si=cGGPk-fWSM2fVDiV"
+					title="YouTube video player"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowFullScreen
+					className="pt-2"
+				></iframe>
+			),
 		},
 		{
 			title: "ScrapHouse",
-			stack: [<SiJavascript className=" text-yellow-300" />, <SiCss3 className="text-blue-500" />, <SiSass className="text-pink-500" />, <SiNextdotjs />, <SiReact className="text-cyan-500" />, <SiMongodb className="text-green-500 bg-foreground rounded-full" />, <SiAuth0 className="text-orange-600" />],
-			description: "This web application is in continuous development to deliver fighter rankings, news, and statistical data across various MMA promotions. Planned features, including the incorporation of event schedules and fighter directory, are in the works as part of this ongoing project.",
+			stack: [
+				<SiJavascript color="#F7DF1E" />,
+				<SiCss3 color="#1572B6" />,
+				<SiSass color="#CC6699" />,
+				<SiNextdotjs />,
+				<SiReact color="#61DAFB" />,
+				<SiMongodb className="text-[#47a248] bg-foreground rounded-full p-1" />,
+				<SiAuth0 color="#EB5424" />,
+			],
+			description:
+				"An ongoing project that aims to provide comprehensive information on the top fighter rankings, news, and statistical data across various MMA promotions. Planned features, including the incorporation of event schedules and fighter directory, are in the works as part of this ongoing project.",
 			from: "December 2023",
 			to: "Present",
 			link: "https://github.com/Aendoarphin/scraphousemma",
-			media: "https://youtu.be/G1poX9Qd7oY"
+			media: (
+				<div className="flex items-start pt-2">
+					{shImages.map((img) => (
+						<img src={img} className="w-1/3" />
+					))}
+				</div>
+			),
 		},
 		{
 			title: "Tool Life Utility",
-			stack: [<SiPython className="text-yellow-300" />, <SiQt className="text-green-400" />],
-			description: "The application centralizes data display, enabling CNC machine operators to avoid the necessity of individually inspecting each machine throughout the shop, thus reducing the need for extensive physical movement.",
+			stack: [<SiPython color="#3776AB" />, <SiQt color="#41CD52" />],
+			description:
+				"A desktop application for displaying part production progress for multiple CNC machines, enabling operators to avoid the necessity of individually inspecting each machine throughout the shop.",
 			from: "August 2023",
 			to: "September 2023",
 			link: "https://github.com/Aendoarphin/pyforcam",
-			media: ["../assets/sh_home.jpeg", "../assets/sh_dashboard.jpeg", "../assets/sh_rankings.jpeg"],
-		}
-	]
+			media: <img src="src/assets/tlu_sample.png" className="pt-2"></img>,
+		},
+	];
 
 	const [selected, setSelected] = useState(0);
 
@@ -50,16 +90,20 @@ export default function Projects() {
 	};
 
 	return (
-		<div id="projects" className="flex mt-10 flex-col px-8 sm:max-w-[30em] mx-auto justify-center md:max-w-[50em] lg:max-w-[54em] h-screen">
+		<div
+			id="projects"
+			className="flex flex-col px-8 sm:max-w-[30em] lg:max-w-[54em] md:max-w-[50em] mx-auto justify-center"
+		>
 			<h1 className="text-heading font-semibold">Projects</h1>
-			<hr className="mb-4" />
+			<hr className="mb-2" />
 			<div id="project-buttons" className="flex flex-nowrap">
 				{projects.map((project: Project, index: number) => (
 					<button
 						type="button"
 						key={index}
-						className={`transition-all ease-in font-light mr-4 pb-2 ${selected === index ? "font-normal" : "text-neutral-600"
-							}`}
+						className={`transition-all ease-in font-light mr-4 pb-2 ${
+							selected === index ? "font-normal" : "text-neutral-600"
+						}`}
 						onClick={() => handleClick(index)}
 					>
 						{project.title}
@@ -69,16 +113,22 @@ export default function Projects() {
 			<div className=" flex flex-col gap-2">
 				<p>{projects[selected].description}</p>
 				<div className="text-xs font-light flex flex-nowrap justify-between">
-					<a href={projects[selected].link} target="_blank" className="underline">Go To Project</a>
-					<p>{projects[selected].from} - {projects[selected].to}</p>
+					<a
+						href={projects[selected].link}
+						target="_blank"
+						className="underline"
+					>
+						Go To Project
+					</a>
+					<p>
+						{projects[selected].from} - {projects[selected].to}
+					</p>
 				</div>
-				<div className="flex flex-nowrap justify-start gap-2">{projects[selected]["stack"].map((icon: JSX.Element) => (
-					icon
-				))} 
+				<div className="flex flex-nowrap justify-start gap-2">
+					{projects[selected]["stack"].map((icon: JSX.Element) => icon)}
 				</div>
+				{projects[selected].media}
 			</div>
 		</div>
 	);
 }
-
-// TODO: add media constants below project info
