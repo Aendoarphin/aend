@@ -1,6 +1,6 @@
 import { SiLinkedin, SiGithub } from "@icons-pack/react-simple-icons";
 import { Phone, Mail, MapPin } from "lucide-react";
-import profileImage from "C:/Users/Aendoarphin/Desktop/aend/src/assets/profile-img.png";
+import profileImage from "../assets/profile-img.png";
 const About = () => {
 	return (
 		<section
