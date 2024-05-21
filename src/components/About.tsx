@@ -42,11 +42,12 @@ const About = () => {
 					>
 						<a
 							href="https://www.linkedin.com/in/arhon-pineda-ba957023a/"
+							target="_blank"
 							title="LinkedIn"
 						>
 							<SiLinkedin />
 						</a>
-						<a href="https://github.com/aendoarphin" title="GitHub">
+						<a href="https://github.com/aendoarphin" target="_blank" title="GitHub">
 							<SiGithub />
 						</a>
 						<a href="tel:+19189062551" title="Phone">
