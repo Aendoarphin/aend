@@ -10,13 +10,13 @@ import {
 	SiSass,
 	SiAuth0,
 } from "@icons-pack/react-simple-icons";
+import shHome from "../assets/sh_home.jpeg";
+import shDashboard from "../assets/sh_dashboard.jpeg";
+import shRankings from "../assets/sh_rankings.jpeg";
+import tlSample from "../assets/tlu_sample.png";
 
 export default function Projects() {
-	const shImages = [
-		"src/assets/sh_home.jpeg",
-		"src/assets/sh_dashboard.jpeg",
-		"src/assets/sh_rankings.jpeg",
-	];
+	const shImages = [shHome, shDashboard, shRankings];
 	type Project = {
 		title: string;
 		stack: JSX.Element[];
@@ -79,7 +79,7 @@ export default function Projects() {
 			from: "August 2023",
 			to: "September 2023",
 			link: "https://github.com/Aendoarphin/pyforcam",
-			media: <img src="src/assets/tlu_sample.png" className="pt-2"></img>,
+			media: <img src={tlSample} className="pt-2"></img>,
 		},
 	];
 

@@ -1,5 +1,6 @@
 import { SiLinkedin, SiGithub } from "@icons-pack/react-simple-icons";
 import { Phone, Mail, MapPin } from "lucide-react";
+import profileImage from "C:/Users/Aendoarphin/Desktop/aend/src/assets/profile-img.png";
 const About = () => {
 	return (
 		<section
@@ -9,9 +10,9 @@ const About = () => {
 			<div className="sm:max-w-[30em] md:max-w-[50em] lg:max-w-[54em] mx-auto flex flex-col md:flex-row pt-24">
 				<div className="items-center max-w-full flex md:flex-col overflow-clip justify-center min-w-64">
 					<img
-						src="./src/assets/profile-img.png"
-						alt=""
-						className="size-52 rounded-full overflow-clip bg-[url(./src/assets/profile-bg.jpg)] mix-blend-screen"
+						src={profileImage}
+						alt="profile image"
+						className={`size-52 rounded-full bg-foreground mix-blend-screen`}
 					/>
 				</div>
 				<br />
