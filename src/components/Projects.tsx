@@ -59,15 +59,18 @@ export default function Projects() {
 				<SiAuth0 color="#EB5424" />,
 			],
 			description:
-				"An ongoing project that aims to provide comprehensive information on the top fighter rankings, news, and statistical data across various MMA promotions. Planned features, including the incorporation of event schedules and fighter directory, are in the works as part of this ongoing project.",
+				"An ongoing project that aims to provide comprehensive information on the top fighter rankings, news, and statistical data across various combat MMA promotions. Planned features, including the incorporation of event schedules and fighter directory, are in the works as part of this ongoing project.",
 			from: "December 2023",
 			to: "Present",
 			link: "https://github.com/Aendoarphin/scraphousemma",
 			media: (
-				<div className="flex items-start pt-2">
+				<div className="flex flex-col items-start pt-2">
+					<a href="https://www.figma.com/design/qrIZPap3RHr92xgFleBnE7/Scrap-House?t=shM4dEKWtBTJM9tU-1" target="_blank" rel="noreferrer noopener" className="font-light text-xs text-nowrap underline pb-2">Go To Figma Design</a>
+					<div className="flex flex-row items-start">
 					{shImages.map((img) => (
-						<img src={img} className="w-1/3" />
+						<img src={img} className=" object-contain flex-1 flex justify-evenly w-1/3" />
 					))}
+					</div>
 				</div>
 			),
 		},
