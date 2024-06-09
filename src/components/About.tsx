@@ -41,7 +41,7 @@ const About = () => {
 						className="flex flex-row md:mx-auto gap-6 mt-2"
 					>
 						<a
-							href="https://www.linkedin.com/in/arhon-pineda-ba957023a/"
+							href="https://www.linkedin.com/in/arhon-p-ba957023a/"
 							target="_blank"
 							title="LinkedIn"
 						>
