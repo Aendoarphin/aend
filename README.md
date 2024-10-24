@@ -1,36 +1,26 @@
-# TLDR
-My personal website which uses sleek and epic front-end tools. I will be adding more content to this site.
+# Summary
+This site will undergo continuous development with plans to integrate additional features in the future. Feel free to contact me for collaboration.
 
-## Summary
-A Vite + React + Typescript web app to showcase my skills. Discover the technologies I work with, read about my priorities, and stay up to date with my ongoing projects.
+# Current Tools and Dependencies
+- Vite: Bundler
+- ESLint: Linting
+- TypeScript: Language
+- React: UI library
+- React DOM: DOM manipulation
+- @icons-pack/react-simple-icons: Icon library
+- lucide-react: React UI library
 
-## Deployment
-<p align="center" style="padding: 3rem">
-  <a href="https://vercel.com/">
-    <img src="./public/vercel-logotype-light.svg" alt="Vercel Logo" height="64">
-  </a>
-</p>
-
-
-## Styling
-- [Shadcn UI](https://ui.shadcn.com/) - Faster component creation
-- [Tailwind CSS](https://tailwindcss.com/) - Shadcn requires it. I also prefer utility styling
-- [SASS](https://sass-lang.com/documentation/syntax/) - Extensibility for future versions
-
-## Feature Backlog
-1. Blog post section to share ideas/work
-2. Contact form for user feedback/inquiry
-3. Merch store for my apparel designs
-
-## PAQs (Potentially Asked Questions)
-### Q: Why are you integrating TS and TSX for a simple static app?
-A: I will be adding more features. It's a simple portfolio-esque site for now. Working with Typescript would also yield a good learning experience for me.
-
-### Q: Why is [some feature] not working?.
-A: Reach out ASAP and I will fix it.
-
-### Q: Could you make [some project] for me?
-A: Please send me detailed requirements and I can provide an overview of possible solutions/ideas.
-
-### Q: How can I contribute?
-A: You can do so in many ways. Just reach out and we can have a discussion. I am totally open to collaborating.
+# Current Development Dependencies
+- @types/react: TypeScript definitions for React
+- @types/react-dom: TypeScript definitions for React DOM
+- @typescript-eslint/eslint-plugin: ESLint plugin for TypeScript
+- @typescript-eslint/parser: ESLint parser for TypeScript
+- @vitejs/plugin-react: Vite plugin for React
+- autoprefixer: CSS vendor prefixing
+- eslint: Linter
+- eslint-plugin-react-hooks: ESLint plugin for React hooks
+- eslint-plugin-react-refresh: ESLint plugin for React Fast Refresh
+- postcss: CSS postprocessing
+- tailwindcss: CSS framework
+- typescript: TypeScript compiler
+- vite: Development server and build tool
