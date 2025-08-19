@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @font-face {
   font-family: "zbonus";
@@ -8,19 +6,120 @@
 }
 
 :root {
-  --background: #151515;
+  --background: #292929;
   --foreground: #e3e3e3;
   --success: #52b55a;
   --danger: #cb4f4f;
   --info: #3ea6cf;
   --warning: #d2b34d;
   --shadow: #0000007d;
-  --heading: 30px;
-  --subheading: 20px;
 }
 
-* {
-  font-family: "Poppins";
-  scroll-behavior: smooth;
-  /* border: 1px solid whitesmoke; */
+@theme {
+  --font-zbonus: zbonus;
+}
+
+@layer base {
+  html {
+    font-size: 16px; /* 1rem = 16px */
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: var(--foreground);
+    background-color: var(--background);
+  }
+
+  /* Headings with fluid scaling */
+  h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem); /* 32px - 56px */
+    line-height: 1.2;
+    margin: 0 0 1rem 0;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem); /* 24px - 40px */
+    line-height: 1.3;
+    margin: 2rem 0 1rem 0;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 3vw, 2rem); /* 20px - 32px */
+    line-height: 1.4;
+    margin: 1.5rem 0 0.75rem 0;
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: clamp(1.125rem, 2.5vw, 1.5rem); /* 18px - 24px */
+    line-height: 1.4;
+    margin: 1.25rem 0 0.5rem 0;
+    font-weight: 500;
+  }
+
+  h5 {
+    font-size: clamp(1rem, 2vw, 1.25rem); /* 16px - 20px */
+    line-height: 1.5;
+    margin: 1rem 0 0.5rem 0;
+    font-weight: 500;
+  }
+
+  h6 {
+    font-size: 1rem; /* 16px */
+    line-height: 1.5;
+    margin: 1rem 0 0.5rem 0;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* Paragraph styling */
+  p {
+    font-size: 1rem; /* 16px */
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+    max-width: 65ch; /* Optimal reading line length */
+  }
+
+  /* Special paragraph variants */
+  p.lead {
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.7;
+    font-weight: 400;
+    margin: 0 0 1.5rem 0;
+  }
+
+  p.small {
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.5;
+    margin: 0 0 0.75rem 0;
+  }
+
+  /* Remove margin from last child elements */
+  h1:last-child,
+  h2:last-child,
+  h3:last-child,
+  h4:last-child,
+  h5:last-child,
+  h6:last-child,
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Mobile optimizations */
+  @media (max-width: 768px) {
+    h2 { margin-top: 1.5rem; }
+    h3 { margin-top: 1.25rem; }
+    h4 { margin-top: 1rem; }
+  }
+}
+
+section {
+  @apply flex items-center justify-center h-screen;
 }
