@@ -1,6 +1,5 @@
 import {
   SiExpress,
-  SiNextdotjs,
   SiNodedotjs,
   SiPostgresql,
   SiReact,
@@ -18,7 +17,7 @@ export default function About() {
       id="about"
       className="flex flex-row gap-20 animate__animated animate__fadeIn animate__slow"
     >
-      <div className="max-w-xl">
+      <div className="max-w-xl relative z-1 border-l pl-10">
         <h1 className="">Hi, I'm Arhon</h1>
         <p className="lead">
           I build websites for people ready to own their digital presence. Solo
@@ -26,25 +25,25 @@ export default function About() {
           media pages and want something that's actually theirs—professional
           enough to impress, personal enough to feel authentic.
         </p>
-      </div>
-      <div className="group w-full rounded-4xl bg-gradient-to-b to-[var(--background)] relative z-0 from-[var(--foreground)] overflow-x-visible max-w-[20vw] shadow-lg">
-        <div className="opacity-100 group-hover:opacity-100 transition-all">
-          <div className="flex flex-wrap flex-col gap-2 absolute h-full w-full p-4">
-            <div className=" flex flex-col w-min gap-4 p-1 *:size-[2vw] *:hover:drop-shadow-xl *:drop-shadow-black *:transition">
-              <SiTypescript color="#3178C6" />
-              <SiNodedotjs color="#339933" />
-              <SiReact color="#61DAFB" />
-              <SiNextdotjs color="#000000" />
-              <SiSupabase color="#3ECF8E" />
-              <SiPostgresql color="#646CFF" />
-              <SiExpress color="#000000" />
-              <SiReactrouter color="#CA4245" />
-              <SiVite color="#a020f0" />
-            </div>
-          </div>
+        <h6>Tech Stack</h6>
+        <div id="icons" className="flex gap-4 w-full *:size-10">
+          <SiTypescript color="#3178C6" />
+          <SiNodedotjs color="#339933" />
+          <SiReact color="#61DAFB" />
+          <SiSupabase color="#3ECF8E" />
+          <SiPostgresql color="#646CFF" />
+          <SiExpress style={{ color: "var(--foreground)" }} />
+          <SiReactrouter color="#CA4245" />
+          <SiVite color="#a020f0" />
         </div>
+        <h6>Credentials</h6>
+        <p className="small">BSc Computer Science, Comptia Security+</p>
+        <h6>Primary Location</h6>
+        <p className="small">Oklahoma, United States</p>
+      </div>
+      <div className="bg-gradient-to-l from-neutral-300 to-[var(--background)] to-90% w-full rounded-r-4xl relative -z--1 bg-[var(--foreground)] overflow-x-visible max-w-96 transition">
         <img
-          className=" max-w-[25vw] place-self-center"
+          className="place-self-center drop-shadow-xl"
           src={selfImage}
           alt="a man wearing a dress shirt with his arms crossed"
         />
