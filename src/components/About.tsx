@@ -1,23 +1,22 @@
 import {
-  SiDotnet,
+  SiExpress,
+  SiNextdotjs,
   SiNodedotjs,
   SiPostgresql,
   SiReact,
+  SiReactrouter,
   SiSupabase,
   SiTypescript,
   SiVite,
 } from "@icons-pack/react-simple-icons";
 import selfImage from "../assets/self.png";
 import "animate.css";
-import { Pin } from "lucide-react";
 
 export default function About() {
-  const iconSize = 20;
-
   return (
     <section
       id="about"
-      className="flex flex-row gap-20 animate__animated animate__fadeIn animate__slow animate__"
+      className="flex flex-row gap-20 animate__animated animate__fadeIn animate__slow"
     >
       <div className="max-w-xl">
         <h1 className="">Hi, I'm Arhon</h1>
@@ -28,18 +27,19 @@ export default function About() {
           enough to impress, personal enough to feel authentic.
         </p>
       </div>
-      <div className="group w-full rounded-4xl bg-gradient-to-b to-[#c9c9c9] relative z-0 from-[var(--foreground)] overflow-x-visible max-w-xs shadow-lg">
+      <div className="group w-full rounded-4xl bg-gradient-to-b to-[var(--background)] relative z-0 from-[var(--foreground)] overflow-x-visible max-w-[20vw] shadow-lg">
         <div className="opacity-100 group-hover:opacity-100 transition-all">
-          <div className="flex flex-wrap flex-col gap-2 absolute border border-black w-full h-full p-4">
-            <SiTypescript size={iconSize} color="#3178C6" />
-            <SiNodedotjs size={iconSize} color="#339933" />
-            <SiReact size={iconSize} color="#61DAFB" />
-            <SiDotnet size={iconSize} color="#512BD4" />
-            <SiSupabase size={iconSize} color="#3ECF8E" />
-            <SiVite size={iconSize} color="#646CFF" />
-            <SiPostgresql size={iconSize} color="#4169E1" />
-            <div className="text-[var(--background)] mix-blend-luminosity absolute top-6 right-0 p-2">
-              <h5><Pin/></h5>
+          <div className="flex flex-wrap flex-col gap-2 absolute h-full w-full p-4">
+            <div className=" flex flex-col w-min gap-4 p-1 *:size-[2vw] *:hover:drop-shadow-xl *:drop-shadow-black *:transition">
+              <SiTypescript color="#3178C6" />
+              <SiNodedotjs color="#339933" />
+              <SiReact color="#61DAFB" />
+              <SiNextdotjs color="#000000" />
+              <SiSupabase color="#3ECF8E" />
+              <SiPostgresql color="#646CFF" />
+              <SiExpress color="#000000" />
+              <SiReactrouter color="#CA4245" />
+              <SiVite color="#a020f0" />
             </div>
           </div>
         </div>
