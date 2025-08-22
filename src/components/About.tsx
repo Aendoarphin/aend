@@ -1,5 +1,6 @@
 import {
   SiExpress,
+  SiGithub,
   SiNodedotjs,
   SiPostgresql,
   SiReact,
@@ -10,20 +11,23 @@ import {
 } from "@icons-pack/react-simple-icons";
 import selfImage from "../assets/self.png";
 import "animate.css";
+import { IconBrandLinkedinFilled, IconMailFilled } from "@tabler/icons-react";
 
 export default function About() {
   return (
     <section
       id="about"
-      className="flex flex-row gap-20 animate__animated animate__fadeIn animate__slow"
+      className="flex flex-row gap-20 justify-center animate__animated animate__fadeIn"
     >
       <div className="max-w-xl relative z-1 border-l pl-10">
-        <h1 className="">Hi, I'm Arhon</h1>
+        <h1 className="text-nowrap">Hi, I'm Arhon Pineda</h1>
         <p className="lead">
-          I build websites for people ready to own their digital presence. Solo
-          entrepreneurs, creators, and small businesses who've outgrown social
-          media pages and want something that's actually theirs—professional
-          enough to impress, personal enough to feel authentic.
+          I'm a web developer with two years of hands-on experience building
+          responsive, user-centered applications from concept to deployment. I
+          work across the full development stack, focusing on clean code
+          architecture and efficient delivery timelines. If you're looking for
+          someone to transform your ideas into complete web solutions, I'd love
+          to collaborate.
         </p>
         <h6>Tech Stack</h6>
         <div id="icons" className="flex gap-4 w-full *:size-10">
@@ -40,8 +44,23 @@ export default function About() {
         <p className="small">BSc Computer Science, Comptia Security+</p>
         <h6>Primary Location</h6>
         <p className="small">Oklahoma, United States</p>
+        <h6>Contact</h6>
+        <p className="small flex flex-row gap-2 items-center">
+          <a href="mailto:arhon.k.pineda@gmail.com">
+            <IconMailFilled title="Email" />
+          </a>
+          <a href="https://github.com/Aendoarphin" target="_blank">
+            <SiGithub size={24} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/arhon-p-ba957023a"
+            target="_blank"
+          >
+            <IconBrandLinkedinFilled title="LinkedIn" />
+          </a>
+        </p>
       </div>
-      <div className="bg-gradient-to-l from-neutral-300 to-[var(--background)] to-90% w-full rounded-r-4xl relative -z--1 bg-[var(--foreground)] overflow-x-visible max-w-96 transition">
+      <div className={`bg-gradient-to-l from-neutral-300 to-background to-90% w-full rounded-r-4xl relative -z--1 bg-[var(--foreground)] overflow-x-visible max-w-sm transition`}>
         <img
           className="place-self-center drop-shadow-xl"
           src={selfImage}

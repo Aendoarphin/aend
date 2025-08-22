@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "@icons-pack/react-simple-icons": "^13.7.0",
+    "@tabler/icons-react": "^3.34.1",
     "@tailwindcss/vite": "^4.1.12",
     "animate.css": "^4.1.1",
-    "lucide-react": "^0.540.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "tailwindcss": "^4.1.12"

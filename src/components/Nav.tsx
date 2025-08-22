@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 
 export default function Nav() {
   const brandText: Array<string> = ["a", "e", "n", "d"];
-  const navLinks: Array<string> = ["about", "projects", "services"];
+  const navLinks: Array<string> = ["about", "projects"];
   const [prevScrollPos, setPrevScrollPos] = useState<number>(0);
-  const [visible, setVisible] = useState<boolean>(true);
+  const [visible, setVisible] = useState<boolean>(true);  
 
   useEffect(() => {
     const handleScroll = () => {
