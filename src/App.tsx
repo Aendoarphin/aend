@@ -4,23 +4,37 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 // import Services from "./components/Services";
 import "animate.css";
+import { useState } from "react";
+import { ThemeContext } from "./context/context";
 
 export default function App() {
+  const [theme, setTheme] = useState("dark");
+
+  if (theme === "light") {
+    window.document.body.style.color = "var(--background)";
+    window.document.body.style.backgroundColor = "var(--foreground)";
+  } else {
+    window.document.body.style.color = "var(--foreground)";
+    window.document.body.style.backgroundColor = "var(--background)";
+  }
+
   return (
-    <div>
-      <header className="relative z-50">
-        <Nav />
-      </header>
-      <main className="flex flex-col gap-4 mx-auto">
-        <About />
-        <Projects />
-        {/* <Services /> */}
-      </main>
-      <footer className="flex w-full items-center justify-center">
-        <p className="p-4 text-sm font-light text-center">
-          &copy; {new Date().getFullYear()} AEND
-        </p>
-      </footer>
-    </div>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      <div>
+        <header className="relative z-50">
+          <Nav />
+        </header>
+        <main className="flex flex-col gap-4 mx-auto">
+          <About />
+          <Projects />
+          {/* <Services /> */}
+        </main>
+        <footer className="flex w-full items-center justify-center">
+          <p className="p-4 text-sm font-light text-center">
+            &copy; {new Date().getFullYear()} AEND
+          </p>
+        </footer>
+      </div>
+    </ThemeContext.Provider>
   );
 }

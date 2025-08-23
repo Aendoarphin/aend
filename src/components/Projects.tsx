@@ -1,5 +1,5 @@
 import { IconExternalLink } from "@tabler/icons-react";
-import React, { useState } from "react";
+import { useState } from "react";
 
 interface Link {
   label: string;
@@ -29,7 +29,7 @@ const projects: Project[] = [
   {
     projectName: "Document Management System",
     description:
-      "A cloud-based platform for centralized document storage and collaborative article creation, enabling teams to streamline their written procedures.",
+      "A serverless web application for centralized document storage and collaborative article creation, enabling teams to streamline their written procedures.",
     images: ["/src/assets/dms.png", "/src/assets/dms2.png"],
     links: [],
   },
@@ -74,13 +74,19 @@ export default function Projects() {
   }
 
   return (
-    <section id="projects" className="flex flex-col p-8 justify-self-start animate__animated animate__fadeIn">
-      <h3 className="">Projects</h3>
-      <div id="tabs" className="flex-row flex *:p-2 border">
+    <section
+      id="projects"
+      className="flex flex-col p-8 justify-self-start animate__animated animate__fadeIn"
+    >
+      <h3 className=" lg:text-6xl lg:pb-2">Projects</h3>
+      <div
+        id="tabs"
+        className="flex-row flex flex-wrap sm:flex-nowrap *:w-full *:p-2"
+      >
         {projects.map((project, index) => (
           <button
-            className={`${
-              tabIndex === index ? "bg-foreground text-background" : ""
+            className={`cursor-pointer ${
+              tabIndex === index ? " contrast-100" : " contrast-0"
             }`}
             onClick={() =>
               handleTabClick(
@@ -91,13 +97,15 @@ export default function Projects() {
               )
             }
           >
-            <p className="small">{project.projectName}</p>
+            <p className="text-sm lg:text-2xl text-nowrap">
+              {project.projectName}
+            </p>
           </button>
         ))}
       </div>
       <br />
       <div id="project-content" className="flex flex-col">
-        <p className="max-w-4xl text-center text-balance mx-auto">
+        <p className="max-w-4xl lg:text-3xl md:text-center lg:max-w-2/3 md:text-balance mx-auto text-start">
           {description}
           <br />
           <br />
@@ -105,22 +113,17 @@ export default function Projects() {
             <a
               href={linkItem?.url}
               target="_blank"
-              className="hover:underline flex items-center justify-center"
+              className="hover:underline flex items-center justify-center w-max mx-auto"
             >
               {links.length > 0 && linkItem?.label}&nbsp;
               <IconExternalLink size={20} className="inline" />
             </a>
           ))}
         </p>
-        <div className="flex flex-row *:m-2 mx-auto">
+        <br />
+        <div className="flex flex-col mx-auto gap-4 border max-w-7xl">
           {images.map((image) => (
-            <img
-              src={image}
-              className={`${
-                images.length > 2 ? "max-w-[25vw]" : "max-w-[40vw]"
-              } object-contain place-self-start`}
-              alt=""
-            />
+            <img src={image} className="border" alt="" />
           ))}
         </div>
       </div>
