@@ -73,7 +73,7 @@ export default function About() {
       >
         <img
           className="place-self-center drop-shadow-xl h-0 sm:h-max"
-          src="../../public/images/self.png"
+          src="/images/self.png"
           alt="a man wearing a dress shirt with his arms crossed"
         />
       </div>

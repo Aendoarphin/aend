@@ -18,7 +18,7 @@ const projects: Project[] = [
     projectName: "Comps",
     description:
       "A desktop application to generate views of sold eBay listings; streamlines the value hunting process for dedicated card collectors/sellers by providing valuable insights in the card community.",
-    images: ["/public/images/comps.png", "/public/images/comps2.png"],
+    images: ["/images/comps.png", "/images/comps2.png"],
     links: [
       {
         label: "Watch Demo",
@@ -30,7 +30,7 @@ const projects: Project[] = [
     projectName: "Document Management System",
     description:
       "A serverless web application for centralized document storage and collaborative article creation, enabling teams to streamline their written procedures.",
-    images: ["/public/images/dms.png", "/public/images/dms2.png"],
+    images: ["/images/dms.png", "/images/dms2.png"],
     links: [],
   },
   {
@@ -38,9 +38,9 @@ const projects: Project[] = [
     description:
       "A Figma and web mockup, for a mixed martial arts news/rankings site.",
     images: [
-      "/public/images/sh_home.png",
-      "/public/images/sh_dashboard.png",
-      "/public/images/sh_rankings.png",
+      "/images/sh_home.png",
+      "/images/sh_dashboard.png",
+      "/images/sh_rankings.png",
     ],
     links: [
       {
