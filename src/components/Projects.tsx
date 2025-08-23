@@ -121,9 +121,9 @@ export default function Projects() {
           ))}
         </p>
         <br />
-        <div className="flex flex-col mx-auto gap-4 border max-w-7xl">
+        <div className="flex flex-col mx-auto gap-4 max-w-7xl">
           {images.map((image) => (
-            <img src={image} className="border" alt="" />
+            <img src={image} className="" alt="" />
           ))}
         </div>
       </div>
