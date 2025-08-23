@@ -9,7 +9,6 @@ import {
   SiTypescript,
   SiVite,
 } from "@icons-pack/react-simple-icons";
-import selfImage from "../assets/self.png";
 import "animate.css";
 import { IconBrandLinkedinFilled, IconMailFilled } from "@tabler/icons-react";
 import { useContext } from "react";
@@ -74,7 +73,7 @@ export default function About() {
       >
         <img
           className="place-self-center drop-shadow-xl h-0 sm:h-max"
-          src={selfImage}
+          src="../../public/images/self.png"
           alt="a man wearing a dress shirt with his arms crossed"
         />
       </div>
