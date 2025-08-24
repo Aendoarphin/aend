@@ -23,7 +23,7 @@ export default function About() {
     >
       <div className="max-w-7xl relative z-1 border-0 sm:border-l pl-0 sm:pl-10">
         <h1 className="text-nowrap">Hi, I'm Arhon Pineda</h1>
-        <p className="small sm:text-3xl w-xs sm:w-full">
+        <p className="small sm:text-xl w-xs sm:w-full">
           I'm a web developer with two years of hands-on experience building
           responsive, user-centered applications from concept to deployment. I
           work across the full development stack, focusing on clean code
@@ -42,13 +42,13 @@ export default function About() {
           <SiReactrouter color="#CA4245" />
           <SiVite color="#a020f0" />
         </div>
-        <h6 className="lg:text-2xl">Credentials</h6>
-        <p className="lg:text-2xl small lg:lead">
+        <h6 className="lg:text-xl">Credentials</h6>
+        <p className="lg:text-xl small">
           BSc Computer Science, CompTia Security+
         </p>
-        <h6 className="lg:text-2xl">Primary Location</h6>
-        <p className="lg:text-2xl small lg:lead">Oklahoma, United States</p>
-        <h6 className="lg:text-2xl">Contact</h6>
+        <h6 className="lg:text-xl">Primary Location</h6>
+        <p className="lg:text-xl small">Oklahoma, United States</p>
+        <h6 className="lg:text-xl">Contact</h6>
         <p className="small flex flex-row gap-2 items-center">
           <a href="mailto:arhon.k.pineda@gmail.com">
             <IconMailFilled title="Email" className="lg:size-10" />
@@ -69,7 +69,7 @@ export default function About() {
           theme === "dark"
             ? "from-foreground to-background"
             : "to-foreground from-background"
-        } to-80% w-full rounded-r-4xl relative -z--1 overflow-x-visible max-w-2xs sm:max-w-sm md:max-w-xl transition`}
+        } to-80% w-full rounded-r-4xl relative -z--1 overflow-x-visible max-w-2xs sm:max-w-sm md:max-w-md transition`}
       >
         <img
           className="place-self-center drop-shadow-xl h-0 sm:h-max"

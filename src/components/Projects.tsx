@@ -78,7 +78,7 @@ export default function Projects() {
       id="projects"
       className="flex flex-col p-8 justify-self-start animate__animated animate__fadeIn"
     >
-      <h3 className=" lg:text-6xl lg:pb-2">Projects</h3>
+      <h3 className=" lg:text-4xl lg:pb-2">Projects</h3>
       <div
         id="tabs"
         className="flex-row flex flex-wrap sm:flex-nowrap *:w-full *:p-2"
@@ -97,7 +97,7 @@ export default function Projects() {
               )
             }
           >
-            <p className="text-sm lg:text-2xl text-nowrap">
+            <p className="text-sm lg:text-xl text-nowrap">
               {project.projectName}
             </p>
           </button>
@@ -105,7 +105,7 @@ export default function Projects() {
       </div>
       <br />
       <div id="project-content" className="flex flex-col">
-        <p className="max-w-4xl lg:text-3xl md:text-center lg:max-w-2/3 md:text-balance mx-auto text-start">
+        <p className="max-w-4xl lg:text-xl md:text-center lg:max-w-2/3 md:text-balance mx-auto text-start">
           {description}
           <br />
           <br />

@@ -55,7 +55,7 @@ export default function Nav() {
         >
           {Object.values(navLinks).map((link) => (
             <div className="uppercase transition-all font-semibold sm:text-base group">
-              <a href={`#${link}`} className="text-xs lg:text-3xl">
+              <a href={`#${link}`} className="text-xs lg:text-xl">
                 {link}
               </a>
               <br />
