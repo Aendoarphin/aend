@@ -17,26 +17,35 @@ const projects: Project[] = [
   {
     projectName: "Comps",
     description:
-      "A desktop application to generate views of sold eBay listings; streamlines the value hunting process for dedicated card collectors/sellers by providing valuable insights in the card community.",
+      "A desktop application to streamline value hunting process for dedicated card collectors/sellers; consumes the 'eBay Average Selling Price' API to fetch historical data of sold eBay listings. UI was made using PyQt6 and its designer tool.",
     images: ["/images/comps.png", "/images/comps2.png"],
     links: [
       {
         label: "Watch Demo",
         url: "https://www.youtube.com/embed/G1poX9Qd7oY?si=cGGPk-fWSM2fVDiV",
       },
+      {
+        label: "GitHub",
+        url: "https://github.com/Aendoarphin/comps_v1",
+      },
     ],
   },
   {
     projectName: "Document Management System",
     description:
-      "A serverless web application for centralized document storage and collaborative article creation, enabling teams to streamline their written procedures.",
+      "A BaaS web application for centralized document storage and collaborative article creation, enabling teams to streamline their written procedures. Business logic runs entirely on the Supabase platform which utilizes authentication, relational database (Postgres), edge functions (to run express webserver code), and file storage.",
     images: ["/images/dms.png", "/images/dms2.png"],
-    links: [],
+    links: [
+      {
+        label: "GitHub",
+        url: "https://github.com/Aendoarphin/dms",
+      },
+    ],
   },
   {
     projectName: "ScrapHouse MMA (UI)",
     description:
-      "A Figma and web mockup, for a mixed martial arts news/rankings site.",
+      "A Figma and web mockup, for a mixed martial arts news/rankings site. Created a Figma design for initial concept and then transformed it into a responsive web app using Next.js.",
     images: [
       "/images/sh_home.png",
       "/images/sh_dashboard.png",
@@ -44,8 +53,12 @@ const projects: Project[] = [
     ],
     links: [
       {
-        label: "Go to Figma Design",
+        label: "Figma Design",
         url: "https://www.figma.com/design/qrIZPap3RHr92xgFleBnE7/Scrap-House",
+      },
+      {
+        label: "GitHub",
+        url: "https://github.com/Aendoarphin/scraphousemma",
       },
     ],
   },
@@ -85,7 +98,7 @@ export default function Projects() {
       >
         {projects.map((project, index) => (
           <button
-            className={`cursor-pointer ${
+            className={`${
               tabIndex === index ? " contrast-100" : " contrast-0"
             }`}
             onClick={() =>
@@ -109,16 +122,18 @@ export default function Projects() {
           {description}
           <br />
           <br />
-          {links.map((linkItem) => (
-            <a
-              href={linkItem?.url}
-              target="_blank"
-              className="hover:underline flex items-center justify-center w-max mx-auto"
-            >
-              {links.length > 0 && linkItem?.label}&nbsp;
-              <IconExternalLink size={20} className="inline" />
-            </a>
-          ))}
+          <div className="flex flex-wrap mx-auto max-w-2xl justify-center gap-4">
+            {links.map((linkItem) => (
+              <a
+                href={linkItem?.url}
+                target="_blank"
+                className="hover:underline flex items-center"
+              >
+                {links.length > 0 && linkItem?.label}&nbsp;
+                <IconExternalLink size={20} className="inline" />
+              </a>
+            ))}
+          </div>
         </p>
         <br />
         <div className="flex flex-col mx-auto gap-4 max-w-7xl">

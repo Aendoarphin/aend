@@ -1,22 +1,19 @@
 import { useState, useEffect, useContext } from "react";
 import { ThemeContext } from "../context/context";
 import { IconMoon, IconSun } from "@tabler/icons-react";
-
 export default function Nav() {
   const { theme, setTheme } = useContext(ThemeContext);
 
-  const brandText: Array<string> = ["a", "e", "n", "d"];
-  const navLinks: Array<string> = ["about", "projects"];
-  const [prevScrollPos, setPrevScrollPos] = useState<number>(0);
-  const [visible, setVisible] = useState<boolean>(true);
+  const navLinks = ["about", "projects"];
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollPos: number = window.scrollY;
-      const isScrollingDown: boolean = currentScrollPos < prevScrollPos;
+      const currentScrollPos = window.scrollY;
+      const isScrollingDown = currentScrollPos < prevScrollPos;
 
       setPrevScrollPos(currentScrollPos);
-
       setVisible(isScrollingDown || currentScrollPos < 10);
     };
 
@@ -29,43 +26,49 @@ export default function Nav() {
 
   return (
     <nav
-      className={`fixed left-0 right-0 top-0 backdrop-blur-2xl ${
+      className={`fixed left-0 right-0 top-0 z-50 backdrop-blur-2xl ${
         visible
           ? "translate-y-0 transition-transform"
           : "-translate-y-40 transition-transform"
       }`}
     >
-      <div className="flex items-center gap-4 justify-between m-4 mx-6">
+      <div className="flex items-center justify-between mx-4 my-4 sm:mx-6">
+        {/* Brand */}
         <a
-          className="flex items-end content-center gap-1 text-4xl uppercase transition-all ease-in sm:text-6xl h-min hover:gap-0 group"
+          className="flex pb-2 sm:pb-0 items-baseline gap-1 transition-all ease-in hover:gap-0 group text-xl sm:text-4xl"
           href="/"
         >
-          {brandText.map((letter) => (
-            <p className="font-zbonus text-4xl max-h-4 sm:text-7xl sm:max-h-11">
-              {letter}
-            </p>
-          ))}
-          <p className="text-sm font-zbonus duration-200 opacity-0 font-brand sm:text-lg group-hover:opacity-100">
-            .dev
-          </p>
+          <div className="flex font-zbonus">AENDOARPHIN</div>
+          <h6 className="text-sm font-zbonus duration-200 opacity-0 sm:text-lg group-hover:opacity-100">
+            .com
+          </h6>
         </a>
-        <div
-          id="links-container"
-          className="flex flex-row gap-4 text-nowrap items-center"
-        >
-          {Object.values(navLinks).map((link) => (
-            <div className="uppercase transition-all font-semibold sm:text-base group">
-              <a href={`#${link}`} className="text-xs lg:text-xl">
+
+        {/* Navigation Links */}
+        <div className="flex items-center gap-4 text-nowrap">
+          {navLinks.map((link, index) => (
+            <div key={index} className="group">
+              <a
+                href={`#${link}`}
+                className="text-xs sm:text-base lg:text-xl uppercase font-semibold transition-all block"
+              >
                 {link}
               </a>
-              <br />
-              <hr className="w-0 transition-all duration-75 ease-in group-hover:w-full" />
+              <hr className="w-0 h-0.5 bg-current border-none transition-all duration-75 ease-in group-hover:w-full" />
             </div>
           ))}
+
+          {/* Theme Toggle */}
           <button
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+            className="p-1 transition-all hover:scale-110"
+            aria-label="Toggle theme"
           >
-            {theme === "dark" ? <IconSun /> : <IconMoon />}
+            {theme === "dark" ? (
+              <IconSun className="w-5 h-5 sm:w-6 sm:h-6" />
+            ) : (
+              <IconMoon className="w-5 h-5 sm:w-6 sm:h-6" />
+            )}
           </button>
         </div>
       </div>

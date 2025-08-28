@@ -133,3 +133,7 @@
 section {
   @apply flex items-center min-h-screen;
 }
+
+button {
+  cursor: pointer;
+}

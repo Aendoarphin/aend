@@ -31,7 +31,7 @@ export default function App() {
         </main>
         <footer className="flex w-full items-center justify-center">
           <p className="p-4 text-sm font-light text-center">
-            &copy; {new Date().getFullYear()} AEND
+            &copy; {new Date().getFullYear()} AENDOARPHIN
           </p>
         </footer>
       </div>
