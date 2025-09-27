@@ -24,14 +24,15 @@ export default function About() {
       <div className="max-w-7xl relative z-1 border-0 sm:border-l pl-0 sm:pl-10">
         <h1 className="text-nowrap">Hi, I'm Arhon Pineda</h1>
         <p className="small sm:text-xl w-xs sm:w-full">
-          I'm a web developer with two years of hands-on experience building
-          responsive, user-centered applications from concept to deployment. I
-          work across the full development stack, focusing on clean code
-          architecture and efficient delivery timelines. If you're looking for
-          someone to transform your ideas into complete web solutions, I'd love
-          to collaborate.
+          I'm a web developer who works across the full stack—backend, frontend,
+          whatever the project needs. My goal is pretty straightforward: use the
+          skills I have (and the ones I'm still picking up) to build things that
+          actually work for people. When you have an idea or problem to solve,
+          I'll dig into the right tools and technologies to make it happen. I'm
+          all about leveraging web tech to help clients stand out in an
+          increasingly digital world, one project at a time.
         </p>
-        <h6>Tech Stack</h6>
+        <h6 className="lg:text-xl">Tech Stack</h6>
         <div id="icons" className="flex flex-wrap gap-4 sm:*:size-10">
           <SiTypescript color="#3178C6" />
           <SiNodedotjs color="#339933" />

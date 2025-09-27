@@ -18,7 +18,7 @@ const projects: Project[] = [
     projectName: "Comps",
     description:
       "A desktop application to streamline value hunting process for dedicated card collectors/sellers; consumes the 'eBay Average Selling Price' API to fetch historical data of sold eBay listings. UI was made using PyQt6 and its designer tool.",
-    images: ["/images/comps.png", "/images/comps2.png"],
+    images: ["/images/comps.png"],
     links: [
       {
         label: "Watch Demo",
@@ -34,7 +34,7 @@ const projects: Project[] = [
     projectName: "Document Management System",
     description:
       "A BaaS web application for centralized document storage and collaborative article creation, enabling teams to streamline their written procedures. Business logic runs entirely on the Supabase platform which utilizes authentication, relational database (Postgres), edge functions (to run express webserver code), and file storage.",
-    images: ["/images/dms.png", "/images/dms2.png"],
+    images: ["/images/dms-demo.gif"],
     links: [
       {
         label: "GitHub",
@@ -45,20 +45,16 @@ const projects: Project[] = [
   {
     projectName: "ScrapHouse MMA (UI)",
     description:
-      "A Figma and web mockup, for a mixed martial arts news/rankings site. Created a Figma design for initial concept and then transformed it into a responsive web app using Next.js.",
+      "A web design for a mixed martial arts news/rankings site. Created a Figma design for initial concept.",
     images: [
-      "/images/sh_home.png",
-      "/images/sh_dashboard.png",
-      "/images/sh_rankings.png",
+      "/images/sh-design.png",
+      "/images/sh-design1.png",
+      "/images/sh-design2.png",
     ],
     links: [
       {
         label: "Figma Design",
         url: "https://www.figma.com/design/qrIZPap3RHr92xgFleBnE7/Scrap-House",
-      },
-      {
-        label: "GitHub",
-        url: "https://github.com/Aendoarphin/scraphousemma",
       },
     ],
   },
@@ -99,7 +95,7 @@ export default function Projects() {
         {projects.map((project, index) => (
           <button
             className={`${
-              tabIndex === index ? " contrast-100" : " contrast-0"
+              tabIndex === index ? " contrast-100 underline" : " contrast-0"
             }`}
             onClick={() =>
               handleTabClick(
@@ -136,9 +132,9 @@ export default function Projects() {
           </div>
         </p>
         <br />
-        <div className="flex flex-col mx-auto gap-4 max-w-7xl">
+        <div className={`flex flex-col md:flex-row mx-auto gap-4 max-w-7xl lg:max-w-max justify-center ${images.length > 1 ? "md:*:w-1/4" : ""}`}>
           {images.map((image) => (
-            <img src={image} className="" alt="" />
+            <img src={image} className="object-contain" alt="" />
           ))}
         </div>
       </div>
