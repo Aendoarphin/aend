@@ -58,7 +58,7 @@ export default function About() {
             <SiGithub className="lg:size-9" />
           </a>
           <a
-            href="https://www.linkedin.com/in/arhon-p-ba957023a"
+            href="https://www.linkedin.com/in/aendoarphin"
             target="_blank"
           >
             <IconBrandLinkedinFilled title="LinkedIn" className="lg:size-10" />
