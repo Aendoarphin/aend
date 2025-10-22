@@ -70,11 +70,11 @@ export default function About() {
           theme === "dark"
             ? "from-foreground to-background"
             : "to-foreground from-background"
-        } to-80% w-full rounded-r-4xl relative -z--1 overflow-x-visible max-w-2xs sm:max-w-sm md:max-w-md transition`}
+        } to-80% w-full rounded-r-4xl relative -z--1 overflow-x-visible max-w-2xs sm:max-w-sm md:max-w-md`}
       >
         <img
           className="place-self-center drop-shadow-xl h-0 sm:h-max"
-          src="/images/self.png"
+          src={`/images/self${theme === 'dark' ? "-dark" : ""}.png`}
           alt="a man wearing a dress shirt with his arms crossed"
         />
       </div>
