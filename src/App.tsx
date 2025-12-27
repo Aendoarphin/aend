@@ -21,6 +21,7 @@ export default function App() {
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div>
+        <img src="/background.svg" className="fixed top-0 bottom-0 left-0 right-0 grayscale opacity-25 -z-1" />
         <header className="relative z-50">
           <Nav />
         </header>

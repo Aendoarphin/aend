@@ -58,6 +58,22 @@ const projects: Project[] = [
       },
     ],
   },
+  {
+    projectName: "Inventory Manager",
+    description:
+      "A three-tier CRUD web application for financial institution inventory management. Built with a Tanstack React frontend, ASP.NET Web API backend, and SQL Server database. Features include employee status and access management, resource categorization, and reporting tools.",
+    images: ["/images/inventory-manager.png"],
+    links: [
+      {
+        label: "React Client GitHub",
+        url: "https://github.com/Aendoarphin/InventoryClient",
+      },
+      {
+        label: "ASP.NET API GitHub",
+        url: "https://github.com/Aendoarphin/InventoryAPI",
+      },
+    ],
+  },
 ];
 
 export default function Projects() {
