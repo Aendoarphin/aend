@@ -1,76 +1,13 @@
-import {
-  SiExpress,
-  SiGithub,
-  SiNodedotjs,
-  SiPostgresql,
-  SiReact,
-  SiReactrouter,
-  SiSupabase,
-  SiTypescript,
-  SiVite,
-} from "@icons-pack/react-simple-icons";
-import "animate.css";
-import { IconBrandLinkedinFilled, IconMailFilled } from "@tabler/icons-react";
 
-export default function About() {
+function About() {
   return (
-    <section
-      id="about"
-      className="flex flex-col sm:flex-row mt-6 sm:mt-0 gap-20 justify-center animate__animated animate__fadeIn"
-    >
-      <div className="max-w-7xl relative z-1 border-0 sm:border-l pl-0 sm:pl-10">
-        <h1 className="text-nowrap">Hi, I'm Arhon Pineda</h1>
-        <p className="small sm:text-xl w-xs sm:w-full">
-          I'm an aspiring software engineer who works across the full stack—backend, frontend,
-          whatever the project needs. My goal is pretty straightforward: use the
-          skills I have (and the ones I'm still picking up) to build things that
-          actually work for people. When you have an idea or problem to solve,
-          I'll dig into the right tools and technologies to make it happen. I'm
-          all about leveraging modern technology to help clients stand out in an
-          increasingly digital world, one project at a time.
-        </p>
-        <h6 className="lg:text-xl">Tech Stack</h6>
-        <div id="icons" className="flex flex-wrap gap-4 sm:*:size-10">
-          <SiTypescript color="#3178C6" />
-          <SiNodedotjs color="#339933" />
-          <SiReact color="#61DAFB" />
-          <SiSupabase color="#3ECF8E" />
-          <SiPostgresql color="#646CFF" />
-          <SiExpress />
-          <SiReactrouter color="#CA4245" />
-          <SiVite color="#a020f0" />
-        </div>
-        <h6 className="lg:text-xl">Credentials</h6>
-        <p className="lg:text-xl small">
-          BSc Computer Science, CompTia Security+
-        </p>
-        <h6 className="lg:text-xl">Primary Location</h6>
-        <p className="lg:text-xl small">Oklahoma, United States</p>
-        <h6 className="lg:text-xl">Contact</h6>
-        <p className="small flex flex-row gap-2 items-center">
-          <a href="mailto:arhon.k.pineda@gmail.com">
-            <IconMailFilled title="Email" className="lg:size-10" />
-          </a>
-          <a href="https://github.com/Aendoarphin" target="_blank">
-            <SiGithub className="lg:size-9" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/aendoarphin"
-            target="_blank"
-          >
-            <IconBrandLinkedinFilled title="LinkedIn" className="lg:size-10" />
-          </a>
-        </p>
-      </div>
-      <div
-        className={`overflow-clip max-w-2xs sm:max-w-sm md:max-w-md rounded-full place-self-center drop-shadow-xl`}
-      >
-        <img
-          className="place-self-center drop-shadow-xl h-0 sm:h-max"
-          src="/images/self.png"
-          alt="a man wearing a suit smiling"
-        />
+    <section id="about">
+      <div className="mx-auto text-center">
+        <h1 className="tracking-wide mb-2">Hi, I'm Arhon</h1>
+        <p className="text-balance w-max">As a software engineer who enjoys designing and building interactive applications, my lifelong objective is to simply make things easier for people in their everyday tasks.</p>
       </div>
     </section>
-  );
+  )
 }
+
+export default About

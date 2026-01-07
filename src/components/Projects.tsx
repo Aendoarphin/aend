@@ -1,159 +1,64 @@
-import { IconExternalLink } from "@tabler/icons-react";
-import { useState } from "react";
-
-interface Link {
-  label: string;
-  url: string;
-}
+import { IconBrandGithub } from "@tabler/icons-react";
 
 interface Project {
-  projectName: string;
+  name: string;
   description: string;
-  images: string[];
-  links: Link[];
+  tools: string[];
+  date: string;
 }
 
 const projects: Project[] = [
   {
-    projectName: "Comps",
-    description:
-      "A desktop application to streamline value hunting process for dedicated card collectors/sellers; consumes the 'eBay Average Selling Price' API to fetch historical data of sold eBay listings. UI was made using PyQt6 and its designer tool.",
-    images: ["/images/comps.png"],
-    links: [
-      {
-        label: "Watch Demo",
-        url: "https://www.youtube.com/embed/G1poX9Qd7oY?si=cGGPk-fWSM2fVDiV",
-      },
-      {
-        label: "GitHub",
-        url: "https://github.com/Aendoarphin/comps_v1",
-      },
-    ],
+    name: "Comps",
+    description: "A python desktop application that consumes an eBay API to present historical stats for trading card sold listings",
+    tools: ["MatPlotLib", "PyQt6", "Qt Designer"],
+    date: "Jan 2025 - Dec 2025",
   },
   {
-    projectName: "Document Management System",
-    description:
-      "A BaaS web application for centralized document storage and collaborative article creation, enabling teams to streamline their written procedures. Business logic runs entirely on the Supabase platform which utilizes authentication, relational database (Postgres), edge functions (to run express webserver code), and file storage.",
-    images: ["/images/dms-demo.gif"],
-    links: [
-      {
-        label: "GitHub",
-        url: "https://github.com/Aendoarphin/dms",
-      },
-    ],
+    name: "Document Management System",
+    description: "A collaborative web app for internal staff to write and publish knowledgebase articles; includes a centralized file store.",
+    tools: ["React (Vite)", "Supabase (DB, Auth, Edge Functions, Storage)", "Express", "Axios", "Context API", "React Router"],
+    date: "Jan 2025 - Dec 2025",
   },
   {
-    projectName: "ScrapHouse MMA (UI)",
-    description:
-      "A web design for a mixed martial arts news/rankings site. Created a Figma design for initial concept.",
-    images: [
-      "/images/sh-design.png",
-      "/images/sh-design1.png",
-      "/images/sh-design2.png",
-    ],
-    links: [
-      {
-        label: "Figma Design",
-        url: "https://www.figma.com/design/qrIZPap3RHr92xgFleBnE7/Scrap-House",
-      },
-    ],
+    name: "ScrapHouse MMA",
+    description: "A proof of concept design for an MMA website",
+    tools: ["Figma"],
+    date: "Jan 2025 - Dec 2025",
   },
   {
-    projectName: "Inventory Manager",
-    description:
-      "A three-tier CRUD web application for financial institution inventory management. Built with a Tanstack React frontend, ASP.NET Web API backend, and SQL Server database. Features include employee status and access management, resource categorization, and reporting tools.",
-    images: ["/images/inventory-manager.png"],
-    links: [
-      {
-        label: "React Client GitHub",
-        url: "https://github.com/Aendoarphin/InventoryClient",
-      },
-      {
-        label: "ASP.NET API GitHub",
-        url: "https://github.com/Aendoarphin/InventoryAPI",
-      },
-    ],
+    name: "Inventory Manager",
+    description: "An internal web app to manage IT inventory assets which include employee access, hardware, software, and vendors.",
+    tools: ["React (TanStack Start)", "ASP.NET WebAPI (Controller-based)", "Entity Framework Core", "Microsoft SQL Server", "IIS Manager"],
+    date: "Jan 2025 - Dec 2025",
   },
 ];
 
-export default function Projects() {
-  const [tabIndex, setTabIndex] = useState(0);
-  const [description, setDescription] = useState(
-    projects[tabIndex].description
-  );
-  const [images, setImages] = useState<Array<string>>(
-    projects[tabIndex].images
-  );
-  const [links, setLinks] = useState(projects[tabIndex].links);
-
-  function handleTabClick(
-    index: number,
-    description: string,
-    images: Array<string>,
-    links: Link[]
-  ) {
-    setTabIndex(index);
-    setDescription(description);
-    setImages(images);
-    setLinks(links);
-  }
-
+function ProjectCard({ project }: { project: Project }) {
   return (
-    <section
-      id="projects"
-      className="flex flex-col p-8 justify-self-start animate__animated animate__fadeIn"
-    >
-      <h3 className=" lg:text-4xl lg:pb-2">Projects</h3>
-      <div
-        id="tabs"
-        className="flex-row flex flex-wrap sm:flex-nowrap *:w-full *:p-2"
-      >
-        {projects.map((project, index) => (
-          <button
-            className={`${
-              tabIndex === index ? " contrast-100 underline" : " contrast-0"
-            }`}
-            onClick={() =>
-              handleTabClick(
-                index,
-                project.description,
-                project.images,
-                project.links
-              )
-            }
-          >
-            <p className="text-sm lg:text-xl text-nowrap">
-              {project.projectName}
-            </p>
-          </button>
-        ))}
+    <div className="rounded-md overflow-hidden text-background max-w-sm min-w-sm *:p-4 border border-foreground">
+      <div className="bg-foreground text-nowrap">
+        <h6>{project.name}</h6>
+        <span className="inline-flex justify-between border w-full"><>{project.date}</><a href="#" title="Go to GitHub Repo"><IconBrandGithub size={20} className="inline" /></a></span>
       </div>
-      <br />
-      <div id="project-content" className="flex flex-col">
-        <p className="max-w-4xl lg:text-xl md:text-center lg:max-w-2/3 md:text-balance mx-auto text-start">
-          {description}
-          <br />
-          <br />
-          <div className="flex flex-wrap mx-auto max-w-2xl justify-center gap-4">
-            {links.map((linkItem) => (
-              <a
-                href={linkItem?.url}
-                target="_blank"
-                className="hover:underline flex items-center"
-              >
-                {links.length > 0 && linkItem?.label}&nbsp;
-                <IconExternalLink size={20} className="inline" />
-              </a>
-            ))}
-          </div>
-        </p>
-        <br />
-        <div className={`flex flex-col md:flex-row mx-auto gap-4 max-w-7xl lg:max-w-max justify-center ${images.length > 1 ? "md:*:w-1/4" : ""}`}>
-          {images.map((image) => (
-            <img src={image} className="object-contain" alt="" />
+      <p className="bg-background text-foreground/50">{project.description}</p>
+    </div>
+  );
+}
+
+function Projects() {
+  return (
+    <section id="projects">
+      <div className="mx-auto place-content-center place-items-center">
+        <h6 className="tracking-widest text-center mb-6">Projects</h6>
+        <div className="flex flex-wrap justify-center gap-8 max-w-sm md:max-w-5xl">
+          {projects.map((e) => (
+            <ProjectCard project={e} />
           ))}
         </div>
       </div>
     </section>
   );
 }
+
+export default Projects;

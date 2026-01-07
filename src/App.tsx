@@ -1,11 +1,9 @@
 import "./App.css";
-import Nav from "./components/Nav";
-import About from "./components/About";
-import Projects from "./components/Projects";
-// import Services from "./components/Services";
 import "animate.css";
 import { useState } from "react";
 import { ThemeContext } from "./context/context";
+import Projects from "./components/Projects";
+import About from "./components/About";
 
 export default function App() {
   const [theme, setTheme] = useState("dark");
@@ -20,22 +18,14 @@ export default function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div>
-        <div className="fixed top-0 bottom-0 left-0 right-0 grayscale opacity-25 -z-1 bg-[url('/background.svg')] bg-cover"></div>
-        <header className="relative z-50">
-          <Nav />
-        </header>
-        <main className="flex flex-col gap-4 mx-auto">
-          <About />
-          <Projects />
-          {/* <Services /> */}
-        </main>
-        <footer className="flex w-full items-center justify-center">
-          <p className="p-4 text-sm font-light text-center">
-            &copy; {new Date().getFullYear()} AENDOARPHIN
-          </p>
-        </footer>
-      </div>
+      <header className="text-center fixed left-0 flex flex-col h-full place-content-center px-6 tracking-widest text-xs gap-4">
+        <a href="#about">About Me</a>
+        <a href="#projects">My Projects</a>
+      </header>
+      <main>
+        <About/>
+        <Projects/>
+      </main>
     </ThemeContext.Provider>
   );
 }
