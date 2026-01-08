@@ -32,11 +32,17 @@
     scroll-behavior: smooth;
   }
 
+  .main-bg {
+    background: url("/images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: brightness(0.5);
+  }
+
   body {
     font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     line-height: 1.6;
     color: var(--foreground);
-    background-color: var(--background);
     cursor: url("/images/cursor.png") 1 1, auto;
   }
 

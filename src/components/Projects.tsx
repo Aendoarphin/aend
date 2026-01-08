@@ -14,37 +14,38 @@ const projects: Project[] = [
     name: "Comps",
     description: "A python desktop application that consumes an eBay API to present historical stats for trading card sold listings",
     tools: ["MatPlotLib", "PyQt6", "Qt Designer"],
-    date: "Jan 2025 - Dec 2025",
+    date: "Apr 2023 - Jun 2023",
     link: "https://github.com/Aendoarphin/comps_v1",
     video: "https://www.youtube.com/embed/G1poX9Qd7oY?si=cGGPk-fWSM2fVDiV",
-  },
-  {
-    name: "Document Management System",
-    description: "A collaborative web app for internal staff to write and publish knowledgebase articles; includes a centralized file store.",
-    tools: ["React (Vite)", "Supabase (DB, Auth, Edge Functions, Storage)", "Express", "Axios", "Context API", "React Router"],
-    date: "Jan 2025 - Dec 2025",
-    link: "https://github.com/Aendoarphin/dms",
   },
   {
     name: "ScrapHouse MMA",
     description: "A proof of concept design for an MMA website",
     tools: ["Figma"],
-    date: "Jan 2025 - Dec 2025",
+    date: "Dec 2023 - Jan 2024",
     link: "https://www.figma.com/design/qrIZPap3RHr92xgFleBnE7/Scrap-House",
   },
+  {
+    name: "Document Management System",
+    description: "A collaborative web app for internal staff to write and publish knowledgebase articles; includes a centralized file store.",
+    tools: ["React (Vite)", "Supabase (DB, Auth, Edge Functions, Storage)", "Express", "Axios", "Context API", "React Router"],
+    date: "Sept 2025 - Nov 2025",
+    link: "https://github.com/Aendoarphin/dms",
+  },
+
   {
     name: "Inventory Manager",
     description: "An internal web app to manage IT inventory assets which include employee access, hardware, software, and vendors.",
     tools: ["React (TanStack Start)", "ASP.NET WebAPI (Controller-based)", "Entity Framework Core", "Microsoft SQL Server", "IIS Manager"],
-    date: "Jan 2025 - Dec 2025",
+    date: "Sept 2025 - Present",
     link: "https://github.com/Aendoarphin/InventoryClient",
   },
 ];
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="rounded-md overflow-hidden text-background bg-foreground max-w-sm min-w-sm *:p-4 border border-foreground">
-      <div className="text-nowrap bg-background/25">
+    <div className="rounded-md overflow-hidden text-background bg-foreground max-w-sm min-w-sm *:p-4">
+      <div className="text-nowrap bg-background/5">
         <h6>{project.name}</h6>
         <span className="inline-flex justify-between w-full text-muted">
           <>{project.date}</>
@@ -70,7 +71,7 @@ function Projects() {
     <section id="projects">
       <div className="mx-auto place-content-center place-items-center">
         <h6 className="tracking-widest text-center mb-6">Projects</h6>
-        <div className="flex flex-wrap justify-center gap-8 max-w-sm md:max-w-5xl">
+        <div className="flex flex-wrap justify-center gap-4 max-w-sm md:max-w-5xl">
           {projects.map((e) => (
             <ProjectCard project={e} />
           ))}
