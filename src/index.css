@@ -14,12 +14,14 @@
   --info: #3ea6cf;
   --warning: #d2b34d;
   --shadow: #0000007d;
+  --muted: #646464;
 }
 
 @theme {
   --font-zbonus: zbonus;
   --color-foreground: var(--foreground);
   --color-background: var(--background);
+  --color-muted: var(--muted);
 }
 
 @layer base {
@@ -35,7 +37,7 @@
     line-height: 1.6;
     color: var(--foreground);
     background-color: var(--background);
-    cursor: url("/public/images/triangle.png") 4 4, auto;
+    cursor: url("/images/cursor.png") 1 1, auto;
   }
 
   /* Headings: Focused on Size and Weight */
@@ -99,6 +101,6 @@ section {
   @apply flex items-center min-h-screen mx-auto container;
 }
 
-button {
-  cursor: pointer;
+a {
+  cursor: url("/images/cursor.png") 1 1, auto;
 }

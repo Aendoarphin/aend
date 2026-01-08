@@ -1,10 +1,12 @@
-import { IconBrandGithub } from "@tabler/icons-react";
+import { IconBrandGithub, IconVideo } from "@tabler/icons-react";
 
 interface Project {
   name: string;
   description: string;
   tools: string[];
   date: string;
+  link: string;
+  video?: string;
 }
 
 const projects: Project[] = [
@@ -13,35 +15,52 @@ const projects: Project[] = [
     description: "A python desktop application that consumes an eBay API to present historical stats for trading card sold listings",
     tools: ["MatPlotLib", "PyQt6", "Qt Designer"],
     date: "Jan 2025 - Dec 2025",
+    link: "https://github.com/Aendoarphin/comps_v1",
+    video: "https://www.youtube.com/embed/G1poX9Qd7oY?si=cGGPk-fWSM2fVDiV",
   },
   {
     name: "Document Management System",
     description: "A collaborative web app for internal staff to write and publish knowledgebase articles; includes a centralized file store.",
     tools: ["React (Vite)", "Supabase (DB, Auth, Edge Functions, Storage)", "Express", "Axios", "Context API", "React Router"],
     date: "Jan 2025 - Dec 2025",
+    link: "https://github.com/Aendoarphin/dms",
   },
   {
     name: "ScrapHouse MMA",
     description: "A proof of concept design for an MMA website",
     tools: ["Figma"],
     date: "Jan 2025 - Dec 2025",
+    link: "https://www.figma.com/design/qrIZPap3RHr92xgFleBnE7/Scrap-House",
   },
   {
     name: "Inventory Manager",
     description: "An internal web app to manage IT inventory assets which include employee access, hardware, software, and vendors.",
     tools: ["React (TanStack Start)", "ASP.NET WebAPI (Controller-based)", "Entity Framework Core", "Microsoft SQL Server", "IIS Manager"],
     date: "Jan 2025 - Dec 2025",
+    link: "https://github.com/Aendoarphin/InventoryClient",
   },
 ];
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="rounded-md overflow-hidden text-background max-w-sm min-w-sm *:p-4 border border-foreground">
-      <div className="bg-foreground text-nowrap">
+    <div className="rounded-md overflow-hidden text-background bg-foreground max-w-sm min-w-sm *:p-4 border border-foreground">
+      <div className="text-nowrap bg-background/25">
         <h6>{project.name}</h6>
-        <span className="inline-flex justify-between border w-full"><>{project.date}</><a href="#" title="Go to GitHub Repo"><IconBrandGithub size={20} className="inline" /></a></span>
+        <span className="inline-flex justify-between w-full text-muted">
+          <>{project.date}</>
+          <span>
+            {project.video && (
+              <a href={project.video} target="_blank" title="Watch Demo">
+                <IconVideo size={20} className="inline mr-2 hover:text-background" />
+              </a>
+            )}
+            <a href={project.link} target="_blank" title="Go to GitHub Repo">
+              <IconBrandGithub size={20} className="inline hover:text-background" />
+            </a>
+          </span>{" "}
+        </span>
       </div>
-      <p className="bg-background text-foreground/50">{project.description}</p>
+      <p>{project.description}</p>
     </div>
   );
 }
