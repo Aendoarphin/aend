@@ -7,13 +7,13 @@ function Contact() {
         <h6>Contact</h6>
         <p>I am currently open for collaboration/opportunities; just shoot me a message!</p>
         <div className="inline-flex **:size-10 *:mx-4 **:stroke-1 *:contrast-25 **:hover:contrast-100 *:transition-all">
-          <a href="https://www.linkedin.com/in/aendoarphin">
+          <a target="_blank" href="https://www.linkedin.com/in/aendoarphin">
             <IconBrandLinkedin />
           </a>
-          <a href="https://github.com/Aendoarphin">
+          <a target="_blank" href="https://github.com/Aendoarphin">
             <IconBrandGithub />
           </a>
-          <a href="mailto:arhon.k.pineda@gmail.com">
+          <a target="_blank" href="mailto:arhon.k.pineda@gmail.com">
             <IconMail />
           </a>
         </div>

@@ -44,7 +44,7 @@ const projects: Project[] = [
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="rounded-md overflow-hidden text-background bg-foreground max-w-sm min-w-sm *:p-4">
+    <div className="rounded-md overflow-hidden text-background text-xs lg:text-sm bg-foreground max-w-sm min-w-sm *:p-4">
       <div className="text-nowrap bg-background/5">
         <h6>{project.name}</h6>
         <span className="inline-flex justify-between w-full text-muted">
