@@ -1,4 +1,4 @@
-import { IconBrandGithub, IconVideo } from "@tabler/icons-react";
+import { IconBrandFigma, IconBrandGithub, IconVideo, type Icon, type IconProps } from "@tabler/icons-react";
 
 interface Project {
   name: string;
@@ -7,6 +7,7 @@ interface Project {
   date: string;
   link: string;
   video?: string;
+  icon: React.ForwardRefExoticComponent<IconProps & React.RefAttributes<Icon>>;
 }
 
 const projects: Project[] = [
@@ -17,6 +18,7 @@ const projects: Project[] = [
     date: "Apr 2023 - Jun 2023",
     link: "https://github.com/Aendoarphin/comps_v1",
     video: "https://www.youtube.com/embed/G1poX9Qd7oY?si=cGGPk-fWSM2fVDiV",
+    icon: IconBrandGithub
   },
   {
     name: "ScrapHouse MMA",
@@ -24,6 +26,7 @@ const projects: Project[] = [
     tools: ["Figma"],
     date: "Dec 2023 - Jan 2024",
     link: "https://www.figma.com/design/qrIZPap3RHr92xgFleBnE7/Scrap-House",
+    icon: IconBrandFigma
   },
   {
     name: "Document Management System",
@@ -31,6 +34,7 @@ const projects: Project[] = [
     tools: ["React (Vite)", "Supabase (DB, Auth, Edge Functions, Storage)", "Express", "Axios", "Context API", "React Router"],
     date: "Sept 2025 - Nov 2025",
     link: "https://github.com/Aendoarphin/dms",
+    icon: IconBrandGithub
   },
 
   {
@@ -39,6 +43,7 @@ const projects: Project[] = [
     tools: ["React (TanStack Start)", "ASP.NET WebAPI (Controller-based)", "Entity Framework Core", "Microsoft SQL Server", "IIS Manager"],
     date: "Sept 2025 - Present",
     link: "https://github.com/Aendoarphin/InventoryClient",
+    icon: IconBrandGithub
   },
 ];
 
@@ -55,8 +60,8 @@ function ProjectCard({ project }: { project: Project }) {
                 <IconVideo size={20} className="inline mr-2 hover:text-background" />
               </a>
             )}
-            <a href={project.link} target="_blank" title="Go to GitHub Repo">
-              <IconBrandGithub size={20} className="inline hover:text-background" />
+            <a href={project.link} target="_blank" title="View project">
+              <project.icon size={20} className="inline hover:text-background" />
             </a>
           </span>{" "}
         </span>
