@@ -20,12 +20,37 @@ export default function App() {
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className="main-bg fixed top-0 bottom-0 min-w-screen object-contain -z-1"></div>
-      <header className="text-center fixed bottom-0 top-0 h-screen w-max flex flex-col place-content-center px-6 tracking-widest text-xs gap-4 z-3 *:hover:scale-110 *:transition-all *:duration-75">
+      
+      {/* Mobile Header - Horizontal at top */}
+      <header className="md:hidden fixed top-0 left-0 right-0 w-full flex justify-center items-center px-4 py-4 tracking-widest text-xs gap-4 sm:gap-6 z-50 backdrop-blur-sm bg-background/30">
+        <a 
+          href="#about" 
+          className="hover:scale-110 transition-all duration-75 px-2 py-1"
+        >
+          About Me
+        </a>
+        <a 
+          href="#projects" 
+          className="hover:scale-110 transition-all duration-75 px-2 py-1"
+        >
+          My Projects
+        </a>
+        <a 
+          href="#contact" 
+          className="hover:scale-110 transition-all duration-75 px-2 py-1"
+        >
+          Contact
+        </a>
+      </header>
+
+      {/* Desktop Header - Vertical sidebar */}
+      <header className="hidden md:flex text-center fixed bottom-0 top-0 h-screen w-max flex-col place-content-center px-6 tracking-widest text-xs gap-4 z-50 *:hover:scale-110 *:transition-all *:duration-75">
         <a href="#about">About Me</a>
         <a href="#projects">My Projects</a>
         <a href="#contact">Contact</a>
       </header>
-      <main>
+
+      <main className="md:ml-0">
         <About />
         <Projects />
         <Contact />

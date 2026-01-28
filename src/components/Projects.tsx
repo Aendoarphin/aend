@@ -36,7 +36,6 @@ const projects: Project[] = [
     link: "https://github.com/Aendoarphin/dms",
     icon: IconBrandGithub
   },
-
   {
     name: "Inventory Manager",
     description: "An internal web app to manage IT inventory assets which include employee access, hardware, software, and vendors.",
@@ -49,36 +48,56 @@ const projects: Project[] = [
 
 function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="rounded-md overflow-hidden text-background text-xs lg:text-sm bg-foreground max-w-sm min-w-sm *:p-4">
-      <div className="text-nowrap bg-background/5">
-        <h6>{project.name}</h6>
-        <span className="inline-flex justify-between w-full text-muted">
-          <>{project.date}</>
-          <span>
+    <div className="rounded-md overflow-hidden border border-muted text-foreground bg-background w-full sm:max-w-sm hover:shadow-lg transition-shadow duration-300">
+      <div className="p-3 sm:p-4 bg-foreground/5">
+        <h6 className="text-base sm:text-lg lg:text-xl mb-1 sm:mb-2 truncate">
+          {project.name}
+        </h6>
+        
+        <span className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-0 text-muted text-xs sm:text-sm">
+          <span className="whitespace-nowrap">{project.date}</span>
+          
+          <span className="flex gap-2 items-center">
             {project.video && (
-              <a href={project.video} target="_blank" title="Watch Demo">
-                <IconVideo size={20} className="inline mr-2 hover:text-background" />
+              <a 
+                href={project.video} 
+                target="_blank" 
+                title="Watch Demo"
+                className="hover:text-background transition-colors"
+              >
+                <IconVideo size={18} className="sm:w-5 sm:h-5" />
               </a>
             )}
-            <a href={project.link} target="_blank" title="View project">
-              <project.icon size={20} className="inline hover:text-background" />
+            <a 
+              href={project.link} 
+              target="_blank" 
+              title="View project"
+              className="hover:text-background transition-colors"
+            >
+              <project.icon size={18} className="sm:w-5 sm:h-5" />
             </a>
-          </span>{" "}
+          </span>
         </span>
       </div>
-      <p>{project.description}</p>
+      
+      <p className="p-3 sm:p-4 text-xs sm:text-sm lg:text-base leading-relaxed">
+        {project.description}
+      </p>
     </div>
   );
 }
 
 function Projects() {
   return (
-    <section id="projects">
-      <div className="mx-auto place-content-center place-items-center">
-        <h6 className="tracking-widest text-center mb-6">Projects</h6>
-        <div className="flex flex-wrap justify-center gap-4 max-w-sm md:max-w-5xl">
-          {projects.map((e) => (
-            <ProjectCard project={e} />
+    <section id="projects" className="px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+      <div className="mx-auto max-w-7xl">
+        <h6 className="tracking-widest text-center mb-6 sm:mb-8 lg:mb-12 text-xl sm:text-2xl lg:text-3xl">
+          Projects
+        </h6>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 max-w-5xl mx-auto">
+          {projects.map((e, index) => (
+            <ProjectCard key={index} project={e} />
           ))}
         </div>
       </div>
